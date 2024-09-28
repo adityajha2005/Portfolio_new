@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Theme Colors */
+    --background: 240 100% 98%; /* Light background */
+    --foreground: 222 84% 4.9%; /* Light text color */
+
+    --card: 240 100% 98%;
+    --card-foreground: 222 84% 4.9%;
+
+    --primary: 240 60% 15%; /* Darker primary color */
+    --primary-foreground: 210 40% 95%; /* Light text on primary */
+    
+    --border: 214.3 31.8% 91.4%; /* Light border */
+    --input: 214.3 31.8% 91.4%; /* Light input */
+  }
+
+  .dark {
+    /* Dark Theme Colors */
+    --background: 0 0% 10%; /* Dark background */
+    --foreground: 210 40% 90%; /* Light text color */
+
+    --card: 0 0% 20%; /* Darker card background */
+    --card-foreground: 210 40% 90%; /* Light text color for card */
+
+    --primary: 0 0% 20%; /* Darker primary color */
+    --primary-foreground: 210 40% 90%; /* Light text on primary */
+    
+    --border: 0 0% 30%; /* Dark border */
+    --input: 0 0% 20%; /* Darker input background */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground; /* These will use your defined variables */
+  }
+}
+
+.homepagecontactbtn {
+  padding: 18px;
+  display: none; /* Hide by default for small screens */
+  gap: 10px;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  border: 2px solid #808080 !important; /* Dark border */
+  transition: all ease-in 0.2s !important;
+}
+
+/* Show on medium screens and larger */
+@media (min-width: 768px) {
+  .homepagecontactbtn {
+    display: flex;
+  }
+}
+
+@keyframes rotate360 {
+  from { transform: rotate(0deg) scale(1.5); }
+  to { transform: rotate(360deg) scale(1.5); }
+}
+
+.rotate-360 {
+  animation: rotate360 0.5s linear;
+}
+
+@keyframes smoothRotate {
+  from { transform: rotate(0deg) scale(1.25); }
+  to { transform: rotate(360deg) scale(1.25); }
+}
+
+.rotate-smooth {
+  animation: smoothRotate 2s linear infinite;
+}
+
+.homepagecontactbtn:hover {
+  box-shadow: none;
+  transform: translateY(6px) !important;
+  transition: all ease-in 0.2s;
+  opacity: 1 !important;
+}
