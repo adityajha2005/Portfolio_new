@@ -66,7 +66,7 @@ const page = () => {
                 <FlipWordsDemo />
                 
                 <p className=" opacity-80 text-sm lg:text-xl lg:mb-2 font-medium">
-                <span className="text-blue-500 font-bold">Contributor @ SSoC'24 GSSoC'24 Hacktoberfest</span>
+                <span className="text-blue-500 font-bold">Contributor @ SSoC'24, GSSoC'24 & Hacktoberfest</span>
                 </p>
                 <div className="flex flex-col md:flex-row items-right mt-3 gap-1 md:gap-3">
                 <CopyCmd />
