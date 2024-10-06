@@ -13,7 +13,7 @@ import { DockDemo } from "@/components/dock";
 import HoverImageComponent from "@/components/skills";
 import ReadmeDisplay from "@/components/readme";
 import ContactMe from "@/components/contact";
-
+import { Analytics } from "@vercel/analytics/react"
 const projects = [
     { title: ' Tradezen', description: 'Decentralized Platform.', icon: <FaReact className='text-blue-500' /> },
     { title: 'DaisyAI', description: 'Python NLP Project', icon: <FaDatabase className='text-purple-500' /> },
