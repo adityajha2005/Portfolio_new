@@ -96,6 +96,9 @@ const page = () => {
             
         </section>
     );
+            <Analytics />
+
 };
+
 
 export default page;
