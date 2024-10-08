@@ -55,7 +55,7 @@ const Navbar = () => {
                 <div className="flex items-center gap-4">
                     <Link
                     // href="Aditya_resume.pdf"
-                        href="https://drive.google.com/file/d/1FMyl2mj4A5JlUQhOj_BsCKnpiuyf2iUo/view?usp=sharing" // Replace with the actual link to your resume
+                        href="https://drive.google.com/file/d/1RmcIf9SDKAEMjhk4U3cS7rPNlVIHbB7z/view?usp=sharing" // Replace with the actual link to your resume
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-gray-800 dark:text-gray-200 hover:text-blue-500 duration-200 ease-linear font-medium uppercase flex items-center gap-2"
@@ -63,6 +63,7 @@ const Navbar = () => {
                         <Download className="w-4 h-4" />
                          Resume
                     </Link>
+                    {/* <a href="Aditya_resume.pdf" download="Resume">Resume</a> */}
                     <ModeToggle />
                 </div>
             </section>
