@@ -10,7 +10,7 @@ const ReadmeDisplay: React.FC = () => {
   useEffect(() => {
     const fetchMarkdown = async () => {
       try {
-        const response = await fetch('/assests/kairvee.md');
+        const response = await fetch('/assests/README.md');
         const text = await response.text();
         setContent(text);
       } catch (error) {
