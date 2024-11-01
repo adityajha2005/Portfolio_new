@@ -23,14 +23,14 @@ const navbarItems = [
         icon: Code,
     },
     {
-        name: "About",
-        href: "/about",
-        icon: Info,
-    },
-    {
         name: "Blogs",
         href: "/blogs",
         icon: FaBlog,
+    },
+    {
+        name: "About",
+        href: "/about",
+        icon: Info,
     },
 ];
 
