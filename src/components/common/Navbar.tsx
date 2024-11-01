@@ -5,7 +5,7 @@ import { Home, Info, Code, TerminalIcon, Download } from "lucide-react"; // Impo
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ModeToggle } from "../ui/darkmode";
-
+import { FaBlog } from "react-icons/fa";
 const navbarItems = [
     {
         name: "Home",
@@ -26,6 +26,11 @@ const navbarItems = [
         name: "About",
         href: "/about",
         icon: Info,
+    },
+    {
+        name: "Blogs",
+        href: "/blogs",
+        icon: FaBlog,
     },
 ];
 
