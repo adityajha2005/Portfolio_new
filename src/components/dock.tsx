@@ -8,28 +8,28 @@ export function DockDemo() {
    
       <Dock>
         <DockIcon>
-        <a href="https://github.com/adityajha2005"  rel="noopener noreferrer">
+        <a href="https://github.com/adityajha2005"  target="_blank">
             <Icons.gitHub className="h-9 w-9" />
           </a>
         </DockIcon>
         <DockIcon>
-        <a href="https://www.linkedin.com/in/aditya-jha-654800280/"  rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/aditya-jha-654800280/"  target="_blank">
             <Icons.linkedin className="h-8 w-9" />
           </a>
         </DockIcon>
         <DockIcon>
-        <a href="https://x.com/adxtya_jha"  rel="noopener noreferrer">
+        <a href="https://x.com/adxtya_jha"  target="_blank">
             <Icons.twitte className="h-10 w-10" />
           </a>
         </DockIcon>
         <DockIcon>
         <a 
-        href="#">
+        href="https://dev.to/adityajha2005" target="_blank">
             <Icons.medium className="h-10 w-9" />
           </a>
         </DockIcon>
         <DockIcon>
-        <a href="mailto:2005akjha@gmail.com" rel="noopener noreferrer">
+        <a href="mailto:2005akjha@gmail.com" target="_blank">
   <Icons.Gmail className="h-9 w-9" />
 </a>
 
