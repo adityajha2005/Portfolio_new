@@ -1,7 +1,9 @@
+'use client';
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3dcard";
 import Image from "next/image";
 import { LinkPreviewDemo } from "@/components/linkpreview";
+import { motion } from "framer-motion";
 // import MLB from '@/public/assests/machine_learningblog.png'
 export default function Blogs() {
   return (
@@ -12,6 +14,8 @@ export default function Blogs() {
           <div className="grid gap-5 sm:grid-cols-1 lg:grid-cols-2">
             {/* Blog Post 1 */}
             <CardContainer className="inter-var">
+            <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}>
               <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-transparent dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
                 <CardItem
                   translateZ="50"
@@ -61,6 +65,7 @@ export default function Blogs() {
                   </CardItem> */}
                 </div>
               </CardBody>
+              </motion.div>
             </CardContainer>
 
            
