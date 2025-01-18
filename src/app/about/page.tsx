@@ -13,19 +13,6 @@ interface Particle {
   speedY: number;
 }
 
-const certifications = [
-  {
-    id: 1,
-    title: "Introduction to Front-End Development",
-    image: "/assests/images/geekster.jpeg",
-    description: "Received the certificate for completing the Front-End course on Coursera",
-    issuer: "Meta",
-    date: "20-02-2024"
-  },
-  
- 
-];
-
 const AboutPage = () => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
@@ -119,7 +106,7 @@ const AboutPage = () => {
                         </div>
                     </motion.div>
                     <ReadmeDisplay />
-                    <CertificationsSection certifications={certifications} />
+                    <CertificationsSection />
                 </div>
             </section>
         </div>
