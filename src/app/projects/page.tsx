@@ -4,7 +4,7 @@ import { CardContainer, CardBody, CardItem } from "@/components/ui/3dcard"; "nex
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { LinkPreviewDemo } from "@/components/linkpreview";
-
+import { Meteors } from "@/components/ui/meteors";
 export default function Component() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32">
@@ -21,6 +21,7 @@ export default function Component() {
                   translateZ="50"
                   className="text-xl font-bold text-neutral-600 dark:text-white"
                 >
+
   RouteWise - AI-Powered Roadmap Generator
   </CardItem>
                 <CardItem
@@ -54,6 +55,7 @@ export default function Component() {
                   >
                     Live Link →
                   </CardItem>
+                  {/* <Meteors number={20} /> */}
 
                   <CardItem
                     translateZ={20}
@@ -65,6 +67,7 @@ export default function Component() {
                     <GitHubLogoIcon className="w-8 h-8" />
                   </CardItem>
                 </div>
+
               </CardBody>
               </motion.div>
             </CardContainer>
@@ -294,8 +297,8 @@ export default function Component() {
               </CardBody>
               </motion.div>
             </CardContainer>
-
           </div>
+
           <LinkPreviewDemo />
         </div>
       </div>
