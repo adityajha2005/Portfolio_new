@@ -1,6 +1,8 @@
 "use client"
 import React from "react";
-import { FaTools, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaTools, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { BsTwitterX } from "react-icons/bs";
+
 import { IconCloudDemo } from "@/components/skillcloud";
 type CodeIconProps = React.SVGProps<SVGSVGElement>;
 function CodeIcon(props: CodeIconProps) {

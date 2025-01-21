@@ -1,6 +1,7 @@
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "./ui/tooltip";
 import Link from "next/link";
 import { FC, SVGProps } from "react";
+import { BsTwitterX } from "react-icons/bs";
 
 export default function Footer() {
   return (
@@ -16,7 +17,7 @@ export default function Footer() {
                   className="text-muted-foreground hover:text-primary transition-colors"
                   prefetch={false}
                 >
-                  <TwitterIcon className="h-7 w-7" />
+                  <BsTwitterX className="h-7 w-7" />
                 </Link>
               </TooltipTrigger>
               <TooltipContent>

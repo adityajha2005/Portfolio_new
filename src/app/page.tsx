@@ -1,5 +1,7 @@
 import React from "react";
-import { GitHubLogoIcon, InstagramLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
+import { GitHubLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
+import { BsTwitterX } from "react-icons/bs";
+
 import { ChevronRight, MailPlus, MouseIcon, Terminal } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

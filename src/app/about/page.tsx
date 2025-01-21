@@ -1,7 +1,9 @@
 "use client"
 import React, { useEffect, useRef } from "react";
 import { motion } from 'framer-motion';
-import { FaTools, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaTools, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { BsTwitterX } from "react-icons/bs";
+
 import CertificationsSection from "@/components/cert";
 import ReadmeDisplay from "@/components/readme";
 
@@ -92,7 +94,7 @@ const AboutPage = () => {
                         A digital explorer pioneering the future through the power of machine learning, the decentralized web, and competitive programming.
                         </p>
                         <div className="flex justify-center space-x-4">
-                            {[FaGithub, FaLinkedin, FaTwitter].map((Icon, index) => (
+                            {[FaGithub, FaLinkedin, BsTwitterX ].map((Icon, index) => (
                                 <motion.a
                                     key={index}
                                     href="#"
