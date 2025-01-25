@@ -60,7 +60,8 @@ const Navbar = () => {
                 <div className="flex items-center gap-4">
                     <Link
                     // href="Aditya_resume.pdf"
-                        href="https://drive.google.com/file/d/1IjsIpzk_MFDUFXRxNE-iNABsAzriMzFc/view?usp=sharing" // Replace with the actual link to your resume
+                        href=
+                        "https://drive.google.com/file/d/1cNi_nJbBL9xOtupWtRfwH1g38j_7QcoC/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-gray-800 dark:text-gray-200 hover:text-blue-500 duration-200 eased-linear font-medium uppercase flex items-center gap-2"
