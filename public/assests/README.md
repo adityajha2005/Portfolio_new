@@ -11,10 +11,9 @@
 <td width="100%" align="left">
 
 - 🔭 I’m currently working on `Frontend` Development and `CP`.
-- 🌱 I’m currently learning `web3` and `backend`
+- 🌱 I’m currently learning `devops`
 - 👯 I’m looking to collaborate with Web 3 , Frontend Developers and CP enthusiast.
-- 🤔 I’m looking for help with web-3 projects.
-- ⚙️ I use daily: `.js`, `.cpp`, `.py`, `.jsx`
+- ⚙️ I use daily: `.ts`, `.py`, `.tsx`
 - 💬 Ping me about **CP**, **fullstack**, **ML**, **web3**
 
 </td>
@@ -35,7 +34,7 @@
 
   <img  align="center"  src="https://github-readme-stats.vercel.app/api?username=adityajha2005&theme=neon&show_icons=true&hide_border=true&count_private=true" />
   <br></br>
-  <img  title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="Mark streak" src="https://github-readme-streak-stats.herokuapp.com/?user=adityajha2005&theme=neon&hide_border=true" /> 
+  <!-- <img  title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="Mark streak" src="https://github-readme-streak-stats.herokuapp.com/?user=adityajha2005&theme=neon&hide_border=true" />  -->
 </td>
 
 </tr>

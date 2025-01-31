@@ -61,7 +61,7 @@ const Navbar = () => {
                     <Link
                     // href="Aditya_resume.pdf"
                         href=
-                        "https://drive.google.com/file/d/1cNi_nJbBL9xOtupWtRfwH1g38j_7QcoC/view?usp=sharing"
+                        "https://drive.google.com/file/d/1HTOETNB6g-rYdXJNlDjrY3LXSFfl9Whx/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-gray-800 dark:text-gray-200 hover:text-blue-500 duration-200 eased-linear font-medium uppercase flex items-center gap-2"
