@@ -1,0 +1,14 @@
+
+:root {
+  // ...existing code...
+  --text-color: #1e1e1e;
+  // ...existing code...
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    // ...existing code...
+    --text-color: #ffffff;
+    // ...existing code...
+  }
+}

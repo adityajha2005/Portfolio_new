@@ -6,6 +6,7 @@ import { BsTwitterX } from "react-icons/bs";
 
 import CertificationsSection from "@/components/cert";
 import ReadmeDisplay from "@/components/readme";
+import ExperienceSection from "@/components/experience";
 
 interface Particle {
   x: number;
@@ -74,41 +75,68 @@ const AboutPage = () => {
         };
     }, []);
 
+    const socialLinks = [
+        { Icon: FaGithub, url: "https://github.com/adityajha2005", label: "GitHub" },
+        { Icon: FaLinkedin, url: "https://www.linkedin.com/in/aditya-jha-654800280", label: "LinkedIn" },
+        { Icon: BsTwitterX, url: "https://twitter.com/adxtya_jha", label: "Twitter" }
+    ];
+
     return (
         <div className="relative">
-           
-            <section className="lg:max-w-[50%] mt-10 md:mt-12 md:max-w-[90%] relative md:m-auto p-2 flex flex-col min-h-screen">
-                <div className="flex gap-3 flex-col justify-center items-left min-h-[60vh] lg:min-h-screen">
-                    <div className='flex justify-center items-center'>
-                        <FaTools className='text-2xl mr-2' />
-                        <h1 className='text-center'> | About Me |</h1>
-                    </div>
+            <section className="lg:max-w-[60%] mt-10 md:mt-12 md:max-w-[90%] relative md:m-auto p-4 flex flex-col">
+                <div className="flex gap-8 flex-col justify-center items-left mb-20">
+                    <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className='flex justify-center items-center gap-3'
+                    >
+                        <FaTools className='text-3xl text-blue-400' />
+                        <h1 className='text-6xl md:text-5xl font-bold'> About Me</h1>
+                    </motion.div>
+                    
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className="text-center"
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className="text-center space-y-8 py-8"
                     >
-                        <h2 className="text-2xl font-bold mb-2">I'm Aditya Jha </h2>
-                        <p className="mb-4">
-                        A digital explorer pioneering the future through the power of machine learning, the decentralized web, and competitive programming.
+                        <h2 className="text-3xl font-bold mb-4">Aditya Jha</h2>
+                        <p className="text-lg leading-relaxed max-w-2xl mx-auto mb-6">
+                            Currently working as a Full Stack AI Intern, I'm deeply passionate about MERN stack development
+                            and artificial intelligence. My journey is driven by competitive programming challenges and
+                            creating innovative solutions that combine web technologies with AI capabilities. I thrive on
+                            turning complex problems into elegant, efficient solutions while continuously exploring the
+                            intersection of web development and artificial intelligence.
                         </p>
-                        <div className="flex justify-center space-x-4">
-                            {[FaGithub, FaLinkedin, BsTwitterX ].map((Icon, index) => (
+                        
+                        <div className="flex justify-center space-x-6 pt-4">
+                            {socialLinks.map(({ Icon, url, label }, index) => (
                                 <motion.a
                                     key={index}
-                                    href="#"
-                                    whileHover={{ scale: 1.2 }}
+                                    href={url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    whileHover={{ scale: 1.2, color: "#60A5FA" }}
                                     whileTap={{ scale: 0.9 }}
-                                    className="text-3xl"
+                                    className="text-3xl hover:text-blue-400 transition-colors"
+                                    aria-label={label}
                                 >
                                     <Icon />
                                 </motion.a>
                             ))}
                         </div>
                     </motion.div>
-                    <ReadmeDisplay />
-                    <CertificationsSection />
+
+                    <div className="space-y-16 md:space-y-32 mt-8">
+                        <div className="relative">
+                            <ExperienceSection />
+                        </div>
+                        
+                        <div className="relative pt-8 md:pt-16">
+                            <div className="w-32 md:w-24 h-0.5 md:h-1 bg-gradient-to-r from-blue-400/50 via-blue-400 to-blue-400/50 mx-auto mb-8 md:mb-16"></div>
+                            <CertificationsSection />
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

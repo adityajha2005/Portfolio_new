@@ -12,7 +12,7 @@
 
 - 🔭 I’m currently working on `Frontend` Development and `CP`.
 - 🌱 I’m currently learning `devops`
-- 👯 I’m looking to collaborate with Web 3 , Frontend Developers and CP enthusiast.
+- 👯 I’m looking to collaborate with Web 3 , Frontend Developers and CP ent husiast.
 - ⚙️ I use daily: `.ts`, `.py`, `.tsx`
 - 💬 Ping me about **CP**, **fullstack**, **ML**, **web3**
 
