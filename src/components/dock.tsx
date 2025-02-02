@@ -5,37 +5,33 @@ export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export function DockDemo() {
   return (
-   
-      <Dock>
-        <DockIcon>
-        <a href="https://github.com/adityajha2005"  target="_blank">
-            <Icons.gitHub className="h-9 w-9" />
-          </a>
-        </DockIcon>
-        <DockIcon>
-        <a href="https://www.linkedin.com/in/aditya-jha-654800280/"  target="_blank">
-            <Icons.linkedin className="h-8 w-9" />
-          </a>
-        </DockIcon>
-        <DockIcon>
-        <a href="https://x.com/adxtya_jha"  target="_blank">
-            <Icons.twitte className="h-10 w-10" />
-          </a>
-        </DockIcon>
-        <DockIcon>
-        <a 
-        href="https://dev.to/adityajha2005" target="_blank">
-            <Icons.medium className="h-10 w-9" />
-          </a>
-        </DockIcon>
-        <DockIcon>
+    <Dock className="mt-4 -ml-2">
+      <DockIcon>
         <a href="mailto:2005akjha@gmail.com" target="_blank">
-  <Icons.Gmail className="h-9 w-9" />
-</a>
-
-        </DockIcon>
-      </Dock>
-    
+          <Icons.Gmail className="h-8 w-8" />
+        </a>
+      </DockIcon>
+      <DockIcon>
+        <a href="https://github.com/adityajha2005" target="_blank">
+          <Icons.gitHub className="h-8 w-8" />
+        </a>
+      </DockIcon>
+      <DockIcon>
+        <a href="https://www.linkedin.com/in/aditya-jha-654800280/" target="_blank">
+          <Icons.linkedin className="h-8 w-8" />
+        </a>
+      </DockIcon>
+      <DockIcon>
+        <a href="https://x.com/adxtya_jha" target="_blank">
+          <Icons.twitte className="h-8 w-8" />
+        </a>
+      </DockIcon>
+      <DockIcon>
+        <a href="https://dev.to/adityajha2005" target="_blank">
+          <Icons.medium className="h-8 w-8" />
+        </a>
+      </DockIcon>
+    </Dock>
   );
 }
 
@@ -49,7 +45,6 @@ const Icons = {
     </svg>
   ),
   Gmail: (props: IconProps) => (
-   
     <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"{...props}>
 <path d="M2 11.9556C2 8.47078 2 6.7284 2.67818 5.39739C3.27473 4.22661 4.22661 3.27473 5.39739 2.67818C6.7284 2 8.47078 2 11.9556 2H20.0444C23.5292 2 25.2716 2 26.6026 2.67818C27.7734 3.27473 28.7253 4.22661 29.3218 5.39739C30 6.7284 30 8.47078 30 11.9556V20.0444C30 23.5292 30 25.2716 29.3218 26.6026C28.7253 27.7734 27.7734 28.7253 26.6026 29.3218C25.2716 30 23.5292 30 20.0444 30H11.9556C8.47078 30 6.7284 30 5.39739 29.3218C4.22661 28.7253 3.27473 27.7734 2.67818 26.6026C2 25.2716 2 23.5292 2 20.0444V11.9556Z" fill="white"/>
 <path d="M22.0515 8.52295L16.0644 13.1954L9.94043 8.52295V8.52421L9.94783 8.53053V15.0732L15.9954 19.8466L22.0515 15.2575V8.52295Z" fill="#EA4335"/>
@@ -60,11 +55,6 @@ const Icons = {
 <path d="M9.94043 8.52441V15.0671L9.94811 15.0734V8.53073L9.94043 8.52441Z" fill="#C5221F"/>
 <path d="M5 11.4668V22.6591C5.07646 23.8904 6.15673 24.0003 6.15673 24.0003H9.94877L9.94014 15.0671L5 11.4668Z" fill="#4285F4"/>
 </svg>
-
-  
-    
-  
-  
   ),
   linkedin: (props: IconProps) => (
     <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" {...props}>
@@ -75,16 +65,19 @@ const Icons = {
   </svg>
   ),
   twitte: (props: IconProps) => (
-    <svg  viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-<circle cx="24" cy="24" r="20" fill="#1DA1F2"/>
-<path fill-rule="evenodd" clipRule="evenodd" d="M36 16.3086C35.1177 16.7006 34.1681 16.9646 33.1722 17.0838C34.1889 16.4742 34.9697 15.5095 35.3368 14.36C34.3865 14.9247 33.3314 15.3335 32.2107 15.5551C31.3123 14.5984 30.0316 14 28.6165 14C25.8975 14 23.6928 16.2047 23.6928 18.9237C23.6928 19.3092 23.7368 19.6852 23.8208 20.046C19.7283 19.8412 16.1005 17.8805 13.6719 14.9015C13.2479 15.6287 13.0055 16.4742 13.0055 17.3766C13.0055 19.0845 13.8735 20.5916 15.1958 21.4747C14.3878 21.4491 13.6295 21.2275 12.9647 20.8587V20.9203C12.9647 23.3066 14.663 25.296 16.9141 25.7496C16.5013 25.8616 16.0661 25.9224 15.6174 25.9224C15.2998 25.9224 14.991 25.8912 14.6902 25.8336C15.3166 27.7895 17.1357 29.2134 19.2899 29.2534C17.6052 30.5733 15.4822 31.3612 13.1751 31.3612C12.7767 31.3612 12.3848 31.338 12 31.2916C14.1791 32.6884 16.7669 33.5043 19.5475 33.5043C28.6037 33.5043 33.5562 26.0016 33.5562 19.4956C33.5562 19.282 33.5522 19.0693 33.5418 18.8589C34.5049 18.1629 35.34 17.2958 36 16.3086Z" fill="white"/>
-</svg>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <path
+        fill="currentColor"
+        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+      />
+    </svg>
   ),
   medium: (props: IconProps) => (
-    <svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <path d="M13 12C13 15.3137 10.3137 18 7 18C3.68629 18 1 15.3137 1 12C1 8.68629 3.68629 6 7 6C10.3137 6 13 8.68629 13 12Z" fill="#0F0F0F"/>
-    <path d="M23 12C23 14.7614 22.5523 17 22 17C21.4477 17 21 14.7614 21 12C21 9.23858 21.4477 7 22 7C22.5523 7 23 9.23858 23 12Z" fill="#0F0F0F"/>
-    <path d="M17 18C18.6569 18 20 15.3137 20 12C20 8.68629 18.6569 6 17 6C15.3431 6 14 8.68629 14 12C14 15.3137 15.3431 18 17 18Z" fill="#0F0F0F"/>
+    <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <path
+        fill="currentColor"
+        d="M120.12 208.29c-3.88-2.9-7.77-4.35-11.65-4.35H91.03v104.47h17.45c3.88 0 7.77-1.45 11.65-4.35 3.88-2.9 5.82-7.25 5.82-13.06v-69.65c-.01-5.8-1.96-10.16-5.83-13.06zM404.1 32H43.9C19.7 32 .06 51.59 0 75.8v360.4C.06 460.41 19.7 480 43.9 480h360.2c24.21 0 43.84-19.59 43.9-43.8V75.8c-.06-24.21-19.7-43.8-43.9-43.8zM154.2 291.19c0 18.81-11.61 47.31-48.36 47.25h-46.4V172.98h47.38c35.44 0 47.36 28.46 47.37 47.28l.01 70.93zm100.68-88.66H201.6v38.42h32.57v29.57H201.6v38.41h53.29v29.57h-62.18c-11.16.29-20.44-8.53-20.72-19.69V193.7c-.27-11.15 8.56-20.41 19.71-20.69h63.19l-.01 29.52zm103.64 115.29c-13.2 30.75-36.85 24.63-47.44 0l-38.53-144.8h32.57l29.71 113.72 29.57-113.72h32.58l-38.46 144.8z"
+      />
     </svg>
   ),
 };

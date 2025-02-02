@@ -1,8 +1,9 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { GitHubLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
 import { BsTwitterX } from "react-icons/bs";
 
-import { ChevronRight, MailPlus, MouseIcon, Terminal } from "lucide-react";
+import { ChevronRight, MailPlus, MouseIcon, Terminal, Download } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import MyProjects from "@/components/projects";
@@ -16,10 +17,26 @@ import HoverImageComponent from "@/components/skills";
 import ReadmeDisplay from "@/components/readme";
 import ContactMe from "@/components/contact";
 import { Analytics } from "@vercel/analytics/react"
+import IconCloud from "@/components/ui/iconcloud";
+import { MotionSection, MotionDiv } from "@/components/motion";
+
+const fadeInUp = {
+  initial: { y: 20, opacity: 0 },
+  animate: { y: 0, opacity: 1 },
+  transition: { duration: 0.5 }
+};
+
+const staggerContainer = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
 const projects = [
-    { title: ' Tradezen', description: 'Decentralized Platform.', icon: <FaReact className='text-blue-500' /> },
-    { title: 'DaisyAI', description: 'Python NLP Project', icon: <FaDatabase className='text-purple-500' /> },
-    { title: 'MagicDocs OpenSource', description: 'A backend project using Next.js.', icon: <FaNodeJs className='text-green-500' /> },
+    { title: 'CareInsight', description: 'AI-Healthcare Platform.', icon: <FaNodeJs className='text-green-500' /> },
+    { title: 'Vibecraft', description: 'AI-Sktech to Image Platform', icon: <FaReact className='text-cyan-400' /> },
    
  
   
@@ -51,56 +68,137 @@ const projects = [
       },
     // Add more certification objects...
   ];
-const page = () => {
-    return (
-        <section className="lg:max-w-[50%] mt-20 md:mt-36 md:max-w-[90%] relative md:m-auto p-4 flex flex-col min-h-screen">
-          
-            <div className=" flex gap-3 flex-col justify-center items-left min-h-[60vh] lg:min-h-screen">
-                <span className=" text-sm lg:text-md flex items-center gap-2 opacity-70 font-medium tracking-widest uppercase">
-                    <Terminal size={17} />
-                    Hi I am
-                </span>
-                <div className="flex items-center gap-3">
-                    <h1 className="text-4xl flex gap-12 items-center flex-row md:text-7xl lg:text-8xl font-bold ">Aditya</h1>
-                    
-                </div>
-               
-                <FlipWordsDemo />
-                
-                <p className=" opacity-80 text-sm lg:text-xl lg:mb-2 font-medium">
-                <span className="text-blue-500 font-bold">Contributor @ SSoC'24, GSSoC'24 & Hacktoberfest</span>
-                </p>
-                <div className="flex flex-col md:flex-row items-right mt-3 gap-1 md:gap-3">
-                <CopyCmd />
+const Home = () => {
+  const iconSlugs = [
+    // Frontend
+    "html5",
+    "css3",
+    "javascript",
+    "typescript",
+    "react",
+    "nextdotjs",
+    "tailwindcss",
+    // Backend
+    "nodedotjs",
+    "express",
+    "nestjs",
+    // Databases
+    "mongodb",
+    "postgresql",
+    "mysql",
+    "prisma",
+    // Tools & Others
+    "git",
+    "github",
+    "postman",
+    "docker",
+    "linux",
+    "vercel",
+    "vscode",
+    "redux",
+  ];
+
+  return (
+    <main className="flex min-h-screen flex-col items-center">
+      {/* Hero Section */}
+      <MotionSection 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="w-full max-w-7xl px-6 min-h-[80vh] flex items-center"
+      >
+        <div className="flex flex-col md:flex-row items-center justify-between w-full">
+          {/* Left side - Introduction */}
+          <MotionDiv 
+            variants={staggerContainer}
+            initial="initial"
+            animate="animate"
+            className="w-full md:w-1/2 space-y-6"
+          >
+            <MotionDiv 
+              variants={fadeInUp}
+              className="text-sm lg:text-md flex items-center gap-2 opacity-70 font-medium tracking-widest uppercase"
+            >
+              <Terminal size={17} />
+              Hi I am
+            </MotionDiv>
             
-    <DockDemo />
-</div>
-<HoverImageComponent />
-<div>
-<MyProjects projects={projects} />
-</div>
-<div>
-  <ContactMe />
-</div>
+            <MotionDiv 
+              variants={fadeInUp}
+              className="text-4xl flex gap-12 items-center flex-row md:text-7xl lg:text-8xl font-bold"
+            >
+              Aditya
+            </MotionDiv>
 
+            <MotionDiv variants={fadeInUp}>
+              <FlipWordsDemo />
+            </MotionDiv>
 
+            <MotionDiv 
+              variants={fadeInUp}
+              className="opacity-80 text-sm lg:text-xl font-medium"
+            >
+              <span className="text-blue-500 font-bold">
+                Contributor @ SSoC'24, GSSoC'24 & Hacktoberfest
+              </span>
+            </MotionDiv>
 
-</div>
+            <MotionDiv 
+              variants={fadeInUp}
+              className="mt-6"
+            >
+              <DockDemo />
+            </MotionDiv>
 
+            <MotionDiv 
+              variants={fadeInUp}
+              className="pt-2"
+            >
+              <MotionDiv
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+                  href="https://drive.google.com/file/d/1HTOETNB6g-rYdXJNlDjrY3LXSFfl9Whx/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center text-sm font-medium bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition-colors duration-200"
+                >
+                  <span className="mr-2">Resume</span>
+                  <Download className="w-4 h-4 ml-1" />
+                </Link>
+              </MotionDiv>
+            </MotionDiv>
+          </MotionDiv>
 
+          {/* Right side - Icon Cloud */}
+          <MotionDiv 
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="w-full md:w-1/2"
+          >
+            <IconCloud iconSlugs={iconSlugs} />
+          </MotionDiv>
+        </div>
+      </MotionSection>
 
-             
-
-            
-
-
-              
-            
-        </section>
-    );
-            <Analytics />
-
+      {/* Rest of the content */}
+      <MotionSection 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="w-full max-w-7xl px-6"
+      >
+        <div className="flex flex-col gap-8">
+          {/* <HoverImageComponent /> */}
+          <MyProjects projects={projects} />
+          <ContactMe />
+        </div>
+      </MotionSection>
+    </main>
+  );
 };
 
-
-export default page;
+export default Home;

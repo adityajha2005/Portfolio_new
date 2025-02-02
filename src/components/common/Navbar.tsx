@@ -17,11 +17,11 @@ const navbarItems = [
         href: "/projects",
         icon: TerminalIcon,
     },
-    {
-        name: "Skills",
-        href: "/skills",
-        icon: Code,
-    },
+    // {
+    //     name: "Skills",
+    //     href: "/skills",
+    //     icon: Code,
+    // },
     {
         name: "Blogs",
         href: "/blogs",
@@ -40,7 +40,7 @@ const Navbar = () => {
         <nav className="z-50 lg:sticky max-w-[90%] m-auto lg:top-0">
             {/* iPad & Desktop Navbar */}
             <section className="flex w-full justify-between items-center m-auto p-2">
-                <Link href="/" className="uppercase text-3xl font-bold tracking-widest relative">
+                <Link href="/" className="uppercase text-3xl font-bold tracking-widest relative font-convergence">
                     AJ<span className="text-blue-700 font-bold text-8xl absolute -bottom-2">.</span>{" "}
                 </Link>
                 <div className="hidden lg:flex gap-5 min-w-96 justify-center items-center backdrop-blur-lg p-2">
@@ -57,8 +57,8 @@ const Navbar = () => {
                         );
                     })}
                 </div>
-                <div className="flex items-center gap-4">
-                    <Link
+                 <div className="flex items-center gap-4">
+                    {/* <Link
                     // href="Aditya_resume.pdf"
                         href=
                         "https://drive.google.com/file/d/1HTOETNB6g-rYdXJNlDjrY3LXSFfl9Whx/view?usp=sharing"
@@ -68,10 +68,11 @@ const Navbar = () => {
                     >
                         <Download className="w-4 h-4" />
                          Resume
-                    </Link>
+                    </Link> */}
                     {/* <a href="Aditya_resume.pdf" download="Resume">Resume</a> */}
                     <ModeToggle />
-                </div>
+                </div> 
+                
             </section>
             {/* Mobile Navbar */}
             <section className="fixed z-50 md:w-[30rem] md:m-auto lg:hidden bottom-10 left-0 right-0 flex flex-wrap justify-center items-center w-full">

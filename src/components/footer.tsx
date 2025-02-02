@@ -14,7 +14,7 @@ export default function Footer() {
                 <Link
                   href="https://x.com/adxtya_jha"
                   target="_blank"
-                  className="text-muted-foreground hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-primary transition-colors px-[30px]"
                   prefetch={false}
                 >
                   <BsTwitterX className="h-7 w-7" />
@@ -44,11 +44,8 @@ export default function Footer() {
             </Tooltip>
           </TooltipProvider>
         </div>
-        <p className="text-sm text-muted-foreground text-center md:text-left">
+        <p className="text-sm text-muted-foreground text-center md:text-right md:mr-[-150px]">
           Made with ❤️ by Aditya
-          {/* <Link href="https://linktr.ee/kairveee" target="_blank" className="font-medium hover:underline" prefetch={false}>
-            Aditya
-          </Link> */}
         </p>
       </div>
     </footer>

@@ -6,29 +6,31 @@ import Image from "next/image";
 import { LinkPreviewDemo } from "@/components/linkpreview";
 import { Meteors } from "@/components/ui/meteors";
 export default function Component() {
+  // <link rel="stylesheet" href="styles.css"></link>
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32">
-      <div className="container px-4 md:px-6">
-        <div className="space-y-6">
+    <section className="w-full py-12 md:py-24 lg:py-32 flex justify-center items-center">
+      <div className="container px-4 md:px-6 mx-auto">
+        <div className="space-y-12 flex flex-col items-center"> {/* Increased space-y to 12 */}
 
-          <div className="grid gap-5 sm:grid-cols-1 lg:grid-cols-2">
-          <CardContainer className="inter-var">
+          <div className="grid gap-12 sm:grid-cols-1 lg:grid-cols-2 justify-items-center"> {/* Increased gap to 12 */}
+          <CardContainer className="inter-var h-full"> {/* Added h-full */}
           <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}>
 
-              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-transparent dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-transparent dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-[550px] rounded-xl p-6 border"> {/* Fixed height to 600px */}
                 <CardItem
                   translateZ="50"
                   className="text-xl font-bold text-neutral-600 dark:text-white"
                 >
-        CareInsight
-        </CardItem>
+                  CareInsight - AI-Powered Healthcare Management System
+                </CardItem>
                 <CardItem
                   as="p"
                   translateZ="60"
                   className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
                 >
-                  Next.js, TypeScript, Firebase, Python, NLP (Hugging Face, Cohere API), Clerk, Google Gemini API.                </CardItem>
+                  Next.js, TypeScript, Firebase, Python, NLP (Hugging Face, Cohere API), Clerk, Google Gemini API
+                </CardItem>
                 <CardItem
                   translateZ="100"
                   rotateX={0}
@@ -69,11 +71,11 @@ export default function Component() {
               </motion.div>
 
             </CardContainer>
-            <CardContainer className="inter-var">
+            <CardContainer className="inter-var h-full"> {/* Added h-full */}
           <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}>
 
-              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-transparent dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-transparent dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-[550px] rounded-xl p-6 border"> {/* Fixed height to 600px */}
                 <CardItem
                   translateZ="50"
                   className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -126,11 +128,11 @@ export default function Component() {
               </motion.div>
 
             </CardContainer>
-          <CardContainer className="inter-var">
+          <CardContainer className="inter-var h-full"> {/* Added h-full */}
             <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}
                                   transition={{ duration: 0.5, ease: "easeOut" }}>
 
-              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-transparent dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-transparent dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-[550px] rounded-xl p-6 border"> {/* Fixed height to 600px */}
                 <CardItem
                   translateZ="50"
                   className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -143,7 +145,7 @@ export default function Component() {
                   translateZ="60"
                   className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
                 >
-                  Next.js, TypeScript, MongoDB, Gemini API
+                  Next.js, TypeScript, MongoDB, Gemini API, TailwindCSS, Prisma
                   </CardItem>
                 <CardItem
                   translateZ="100"
@@ -187,23 +189,24 @@ export default function Component() {
             </CardContainer>
             
           
-            <CardContainer className="inter-var">
+            <CardContainer className="inter-var h-full"> {/* Added h-full */}
           <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}
                       transition={{ duration: 0.5, ease: "easeOut" }}>
 
-              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-transparent dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-transparent dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-[550px] rounded-xl p-6 border"> {/* Fixed height to 600px */}
                 <CardItem
                   translateZ="50"
                   className="text-xl font-bold text-neutral-600 dark:text-white"
                 >
-            VibeCraft 
-        </CardItem>
+                  VibeCraft - AI Text-to-Image Generation Platform
+                </CardItem>
                 <CardItem
                   as="p"
                   translateZ="60"
                   className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
                 >
-Next.js, TypeScript, Hugging Face, Clipdrop API.                </CardItem>
+                  Next.js, TypeScript, Hugging Face, Clipdrop API, TailwindCSS, Cloudinary
+                </CardItem>
                 <CardItem
                   translateZ="100"
                   rotateX={0}
@@ -242,11 +245,11 @@ Next.js, TypeScript, Hugging Face, Clipdrop API.                </CardItem>
               </CardBody>
               </motion.div>
             </CardContainer>
-          <CardContainer className="inter-var">
+          <CardContainer className="inter-var h-full"> {/* Added h-full */}
           <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}
                       transition={{ duration: 0.5, ease: "easeOut" }}>
 
-              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-transparent dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-transparent dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-[550px] rounded-xl p-6 border"> {/* Fixed height to 600px */}
                 <CardItem
                   translateZ="50"
                   className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -355,23 +358,23 @@ Next.js, TypeScript, Hugging Face, Clipdrop API.                </CardItem>
               </motion.div>
             </CardContainer>
              */}
-            <CardContainer className="inter-var">
+            <CardContainer className="inter-var h-full"> {/* Added h-full */}
             <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}
                                   transition={{ duration: 0.5, ease: "easeOut" }}>
 
-              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-transparent dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-transparent dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-[550px] rounded-xl p-6 border"> {/* Fixed height to 600px */}
                 <CardItem
                   translateZ="50"
                   className="text-xl font-bold text-neutral-600 dark:text-white"
                 >
-                  DaisyAI
+                  DaisyAI - Intelligent Voice Assistant System
                 </CardItem>
                 <CardItem
                   as="p"
                   translateZ="60"
                   className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
                 >
-                 Python, Natural Language Processing, Speech Recognition, Text-to-Speech
+                  Python, Natural Language Processing, Speech Recognition, Text-to-Speech, OpenAI, PyAudio
                 </CardItem>
                 <CardItem
                   translateZ="100"

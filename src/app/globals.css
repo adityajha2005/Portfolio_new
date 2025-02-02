@@ -32,15 +32,17 @@
     --border: 0 0% 30%; /* Dark border */
     --input: 0 0% 20%; /* Darker input background */
   }
-}
 
-@layer base {
   * {
-    @apply border-border;
+    @apply border-[#e5e7eb] dark:border-[#374151];
   }
   
   body {
-    @apply bg-background text-foreground; /* These will use your defined variables */
+    @apply bg-background text-foreground font-poppins; /* These will use your defined variables */
+  }
+
+  h1, .logo {
+    font-family: var(--font-convergence);
   }
 }
 
@@ -86,4 +88,36 @@
   transform: translateY(6px) !important;
   transition: all ease-in 0.2s;
   opacity: 1 !important;
+}
+
+.tagcloud--item {
+  cursor: pointer;
+  padding: 2px;
+  transition: 0.3s;
+}
+
+.tagcloud--item:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .tagcloud {
+    transform: scale(0.8);
+  }
+}
+
+section {
+  position: relative;
+  width: 100%;
+}
+
+section + section {
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }

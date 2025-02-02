@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Convergence, Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/common/Navbar";
@@ -10,6 +10,17 @@ import { Analytics } from "@vercel/analytics/react"
 
 
 const inter = Inter({ subsets: ["latin"] });
+const convergence = Convergence({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-convergence",
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: "Aditya",
@@ -24,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en"suppressHydrationWarning>
     
-       <body>
+       <body className={`${convergence.variable} ${poppins.variable} font-poppins`}>
       
           <ThemeProvider
             attribute="class"

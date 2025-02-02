@@ -15,7 +15,7 @@ const DEFAULT_MAGNIFICATION = 60;
 const DEFAULT_DISTANCE = 140;
 
 const dockVariants = cva(
-  "mx-auto w-max  h-[58px] p-2 flex items-end gap-2 border dark:border-[#ffffff]",
+  "mx-0 w-max h-[60px] p-0 flex items-center gap-6", // Removed rounded-lg, adjusted spacing and height
 );
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
@@ -101,7 +101,7 @@ const DockIcon = ({
       ref={ref}
       style={{ width }}
       className={cn(
-        "flex aspect-square cursor-pointer items-center justify-center rounded-full bg-neutral-400/40",
+        "flex aspect-square cursor-pointer items-center justify-center", // Removed rounded-full and background
         className,
       )}
       {...props}
