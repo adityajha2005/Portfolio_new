@@ -12,15 +12,16 @@ interface ExperienceItem {
 }
 
 const experiences: ExperienceItem[] = [
-    // {
-    //     title: "Full Stack AI Intern",
-    //     company: "",
-    //     period: "Feb 2025",
-    //     description: [
-            
-    //     ],
-    //     side: 'left'
-    // },
+    {
+        title: "Full Stack AI Intern",
+        company: "Aiphi AI",
+        period: "Feb 2025",
+        description: [
+            "Developing and optimizing AI-powered applications, integrating machine learning models into full-stack systems",
+            "Collaborating with cross-functional teams to enhance AI solutions for real-world applications.",
+        ],
+        side: 'left'
+    },
     {
         title: "Research Assistant",
         company: "AI4A Lab",
